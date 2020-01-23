@@ -11,11 +11,11 @@
     <form class="new_user" id="new_user" action="{{ route('login') }}" accept-charset="UTF-8" method="post">
     {{ csrf_field() }}
       <div class="form-group">
-        <label for="user_name">ユーザーID</label><br>
-        <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
-        @if ($errors->has('name'))
+        <label for="user_email">メールアドレス</label><br>
+        <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+        @if ($errors->has('email'))
             <span class="help-block">
-                <strong>{{ $errors->first('name') }}</strong>
+                <strong>{{ $errors->first('email') }}</strong>
             </span>
         @endif
       </div>

@@ -37,8 +37,11 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+    /*
+     * ログイン認証の対象カラムの変更（ユニークであることが条件）
     public function username()
     {
         return 'name';
     }
+    */
 }
