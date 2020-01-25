@@ -17,7 +17,7 @@ class CardsController extends Controller
         $this->middleware('auth');
     }
     
-    public function new ($listing_id)
+    public function new($listing_id)
     {
          // テンプレート「card/new.blade.php」を表示します。
         return view('card/new', ['listing_id' => $listing_id]);
