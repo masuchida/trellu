@@ -26,7 +26,7 @@
   transition: opacity 0.5s;
   text-decoration: none;
 }
-.carddetailPage .cardContents_btnArea > a.delete_btn {
+.carddetailPage .cardContents_btnArea > a.return_btn {
   max-width: 200px;
   margin: 5px;
   background: #00a74c;

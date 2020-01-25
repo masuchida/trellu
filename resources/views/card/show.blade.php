@@ -17,7 +17,7 @@
       </div>
       <div class="cardContents_btnArea">
         <a class="edit_btn" href="/listing/{{ $listing->id }}/card/{{ $card->id }}/edit">編集する</a>
-        <a class="delete_btn" href="/">戻る</a>
+        <a class="return_btn" href="/">戻る</a>
         <a class="text-danger delete_btn"  onclick="return confirm('このカードを削除して大丈夫ですか?')" rel="nofollow" data-method="delete" href="/listing/{{ $listing->id }}/card/{{ $card->id }}/delete">削除する</a>
       </div>
     </div>
