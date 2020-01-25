@@ -28,7 +28,7 @@
 }
 .carddetailPage .cardContents_btnArea > a.delete_btn {
   max-width: 200px;
-  margin: 5px 0 0 0;
+  margin: 5px;
   background: #00a74c;
   padding: 7px;
   border-radius: 10px;
