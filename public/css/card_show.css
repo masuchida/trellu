@@ -26,6 +26,16 @@
   transition: opacity 0.5s;
   text-decoration: none;
 }
+.carddetailPage .cardContents_btnArea > a.delete_btn {
+  max-width: 200px;
+  margin: 5px 0 0 0;
+  background: #00a74c;
+  padding: 7px;
+  border-radius: 10px;
+  color: #fff;
+  transition: opacity 0.5s;
+  text-decoration: none;
+}
 .carddetailPage .cardContents_btnArea > a.edit_btn:hover {
   opacity: 0.7;
 }
