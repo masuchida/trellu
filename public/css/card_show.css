@@ -28,8 +28,7 @@
 }
 .carddetailPage .cardContents_btnArea > a.return_btn {
   max-width: 200px;
-  margin: 0 auto;
-  margin-top: 5px;
+  margin: 5px auto;
   background: #00a74c;
   padding: 7px;
   border-radius: 10px;
