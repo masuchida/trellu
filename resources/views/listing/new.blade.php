@@ -16,7 +16,7 @@
       <div class="col-sm-offset-3 col-sm-6">
         <button type="submit" class="btn btn-default">
         <i class="glyphicon glyphicon-plus"></i> 作成 </button>
-        <button class="btn btn-default" href="/"> 戻る </button>
+        <a class="btn btn-default" href="/"> 戻る </a>
       </div>
     </div>
   </form>
