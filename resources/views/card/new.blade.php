@@ -1,11 +1,11 @@
 @extends('layouts.app')
 @section('content')
-<!-- バリデーションエラーの場合に表示 --> 
+<!-- バリデーションエラーの場合に表示 -->
 @include('common.errors')
 <div class="cardnewPgae">
   <div class='container'>
     <form class="cardnewForm" action="/listing/{{ $listing_id }}/card" accept-charset="UTF-8" data-remote="true" method="post">
-      {{csrf_field()}} 
+      {{csrf_field()}}
       <input value="{{ $listing_id }}" type="hidden" name="listing_id">
       <div class="cardnewForm_title">
         <label for="card_title">タイトル</label>

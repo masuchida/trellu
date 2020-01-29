@@ -16,12 +16,12 @@ class CardsController extends Controller
         // ログインしていなかったらログインページに遷移する（この処理を消すとログインしなくてもページを表示する）
         $this->middleware('auth');
     }
-    
+
     public function new($listing_id)
     {
-         // テンプレート「card/new.blade.php」を表示します。
+         // テンプレート「card/new.blade.php」を表示
         return view('card/new', ['listing_id' => $listing_id]);
-        
+
     }
 
     public function store(Request $request)
@@ -33,10 +33,9 @@ class CardsController extends Controller
         if ($validator->fails())
         {
             return redirect()->back()->withErrors($validator->errors())->withInput();
-            
         }
 
-        // Card
+        // Cardインスタンスを生成し、requestからの入力を格納し、save()で保存
         $cards = new Card;
         $cards->title = $request->card_title;
         $cards->listing_id = $request->listing_id;
@@ -51,7 +50,7 @@ class CardsController extends Controller
     {
         $listing = Listing::find($listing_id);
         $card = Card::find($card_id);
-         // テンプレート「card/show.blade.php」を表示します。
+         // テンプレート「card/show.blade.php」を表示
         return view('card/show', ['listing' => $listing, 'card' => $card]);
     }
 
@@ -60,7 +59,7 @@ class CardsController extends Controller
         $listings = Listing::where('user_id', Auth::user()->id)->get();
         $listing = Listing::find($listing_id);
         $card = Card::find($card_id);
-         // テンプレート「card/edit.blade.php」を表示します。
+         // テンプレート「card/edit.blade.php」を表示
         return view('card/edit', ['listings' => $listings, 'listing' => $listing, 'card' => $card]);
     }
 

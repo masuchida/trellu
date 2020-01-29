@@ -21,16 +21,16 @@ class ListingsController extends Controller
         $listings = Listing::where('user_id', Auth::user()->id)
             ->orderBy('created_at', 'asc')
             ->get();
-            
-         // テンプレート「listing/index.blade.php」を表示します。
+
+         // テンプレート「listing/index.blade.php」を表示
         return view('listing/index', ['listings' => $listings]);
     }
 
     public function new()
     {
-         // テンプレート「listing/new.blade.php」を表示します。
+         // テンプレート「listing/new.blade.php」を表示
         return view('listing/new');
-        
+
     }
 
     public function store(Request $request)
@@ -57,7 +57,7 @@ class ListingsController extends Controller
     public function edit($listing_id)
     {
         $listing = Listing::find($listing_id);
-         // テンプレート「listing/edit.blade.php」を表示します。
+         // テンプレート「listing/edit.blade.php」を表示
         return view('listing/edit', ['listing' => $listing]);
     }
 
@@ -71,7 +71,7 @@ class ListingsController extends Controller
         {
           return redirect()->back()->withErrors($validator->errors())->withInput();
         }
-        
+
         $listing = Listing::find($request->id);
         $listing->title = $request->list_name;
         $listing->save();
